@@ -304,7 +304,7 @@ int artico3_free(const char *kname, const char *pname);
  * ARTICo3 data reinterpretation: float to a3data_t (32 bits)
  *
  */
-static inline a3data_t ftoa3u(float f) {
+static inline a3data_t ftoa3(float f) {
     union { float f; a3data_t u; } un;
     un.f = f;
     return un.u;
@@ -315,7 +315,7 @@ static inline a3data_t ftoa3u(float f) {
  * ARTICo3 data reinterpretation: a3data_t to float (32 bits)
  *
  */
-static inline float a3utof(a3data_t u) {
+static inline float a3tof(a3data_t u) {
     union { float f; a3data_t u; } un;
     un.u = u;
     return un.f;
